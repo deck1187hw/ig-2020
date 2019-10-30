@@ -1,3 +1,4 @@
+const getAppRoutes = require('./utils/getRoutes.js');
 
 export default {
   mode: 'universal',
@@ -57,6 +58,11 @@ export default {
     */
     transpile: ['vue-instantsearch', 'instantsearch.js/es'],
     extend (config, ctx) {
+    }
+  },
+  generate: {
+    routes: async function() {
+      return getAppRoutes()
     }
   }
 }
