@@ -2,16 +2,22 @@
 <div>
 <div class="container">
     <div class="row">
+      <div class="col">
       <logo />
 
       <h2 class="subtitle">
         Example IG JAMstack implementation
       </h2>
-      <div class="links">
+      </div>
+
+    </div>
+    <div class="row">
+            <div class="links col">
         <nuxt-link to="/" class="button--green">Home</nuxt-link>
         <nuxt-link to="/news/" class="button--green">News</nuxt-link>
       
       </div>
+
     </div>
       </div>
    
@@ -57,12 +63,18 @@ html {
   text-decoration: none;
   padding: 10px 30px;
 }
+.button--green:hover{
+  text-decoration: none
+}
 
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
 }
-
+.nuxt-link-exact-active{
+  background: #19b591;
+  color: white;
+}
 .button--grey {
   display: inline-block;
   border-radius: 4px;
@@ -79,7 +91,7 @@ html {
 }
 .container {
   margin: 0 auto;
-  display: flex;
+
   padding: 20px;
 }
 

@@ -12,7 +12,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "stylesheet", type: "text/css", href: "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" }
     ]
   },
   /*
@@ -54,6 +55,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    transpile: ['vue-instantsearch', 'instantsearch.js/es'],
     extend (config, ctx) {
     }
   }

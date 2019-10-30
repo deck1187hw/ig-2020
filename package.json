@@ -1,18 +1,22 @@
 {
   "name": "ig-2020",
   "version": "1.0.0",
-  "description": "My lovely Nuxt.js project",
+  "description": "IG Example using JAMstack",
   "author": "Miguel Puig",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "postinstall": "netlify-lambda install"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "@nuxtjs/axios": "^5.3.6",
+    "netlify-lambda": "^1.6.0",
+    "nuxt": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
 }
