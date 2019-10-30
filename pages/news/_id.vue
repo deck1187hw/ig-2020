@@ -40,7 +40,6 @@ export default {
     let art = result.articles.find(function(item){
         return decodeURIComponent(item.url) === params.id
     })
-            console.log(art)
     return {  newSingle: art }
   }
 }
