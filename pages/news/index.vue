@@ -1,20 +1,22 @@
 <template>
-  <div class="container">
-    <h2>News</h2>
-    <div class="row">
-      <div class="col" v-for="(item, index) in news.articles" :key="index">
-        <div class="card" style="width: 18rem;">
-          <img :src="item.image.url" class="card-img-top" />
-          <div class="card-body">
-            <h5 class="card-title">{{item.title}}</h5>
-            <p
-              class="card-text"
-              v-html="item.intro"
-            >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div>
+    <div class="row mb-2">
+      <div class="col-md-6" v-for="(item, index) in news.articles" :key="index">
+        <div
+          class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">World</strong>
+            <h3 class="mb-0">{{item.title}}</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto" v-html="item.intro"></p>
             <nuxt-link
               :to="`/news/${encodeURIComponent(item.url)}`"
-              class="btn btn-primary block"
-            >View</nuxt-link>
+              class="stretched-link"
+            >Continue reading</nuxt-link>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img :src="item.image.url" class="imageArt1" />
           </div>
         </div>
       </div>
@@ -38,4 +40,7 @@ export default {
 </script>
 
 <style>
+.imageArt1 {
+  width: 140px;
+}
 </style>
