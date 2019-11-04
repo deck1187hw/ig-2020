@@ -46,7 +46,7 @@
           <footer class="blog-footer">
             <p>Example using Nuxt + HTML generated app.</p>
             <p>
-              <a href="/sitemap-ma.xml">Sitemap MA</a>
+              <a href="/sitemap-ma.xml">Sitemap MA</a> | 
               <a href="/sitemap-news.xml">Sitemap News</a>
             </p>
           </footer>
